@@ -1,0 +1,29 @@
+syntax = "proto3";
+package meta;
+
+message MetaAccess {
+  string _id = 1;
+  string role = 2;
+  string merchant = 3;
+}
+
+message MetaUser {
+  string _id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string txnCount = 5;
+}
+
+message MetaPerm {
+  bool readOwned = 1;
+  bool createOwned = 2;
+  bool updateOwned = 3;
+  bool deleteOwned = 4;
+}
+
+message Meta {
+  MetaUser _user = 1;
+  MetaPerm _perm = 2;
+  MetaAccess _access = 3;
+}

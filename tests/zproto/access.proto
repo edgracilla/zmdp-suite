@@ -1,0 +1,64 @@
+package access;
+import "meta.proto";
+
+syntax = "proto3";
+
+message Access {
+  string _id = 1;
+  string user = 2;
+  string role = 3;
+  string merchant = 4;
+  bool active = 5;
+}
+
+message AccessQuery {
+  string _id = 1;
+  string user = 2;
+  string role = 3;
+  string merchant = 4;
+  bool active = 5;
+}
+
+message create {
+  Access data = 1;
+  Meta meta = 2;
+}
+
+message read {
+  string _id = 1;
+  Meta meta = 2;
+}
+
+message update {
+  string _id = 1;
+  Access data = 2;
+  Meta meta = 3;
+}
+
+message delete {
+  string _id = 1;
+  Meta meta = 2;
+}
+
+message search {
+  AccessQuery options = 1;
+  Meta meta = 2;
+}
+
+// -- expiremental
+
+message createResult {
+  Access result = 1;
+}
+
+message readResult {
+  Access result = 1;
+}
+
+message updateResult {
+  Access result = 1;
+}
+
+message deleteResult {
+  bool result = 1;
+}

@@ -1,0 +1,34 @@
+{
+  "name": "zmdp-suite",
+  "version": "1.0.0",
+  "description": "ZeroMQ Majordomo Protocol - NodeJS Implementation",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "broker": "node ./tests/run-broker.mjs",
+    "client": "node ./tests/run-client.mjs",
+    "worker": "node ./tests/run-worker.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edgracilla/zmdp-suite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edgracilla/zmdp-suite/issues"
+  },
+  "homepage": "https://github.com/edgracilla/zmdp-suite#readme",
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-security": "^1.5.0",
+    "pino": "^8.5.0",
+    "pino-pretty": "^9.1.0",
+    "zmdp-protocoder": "github:edgracilla/zmdp-protocoder"
+  },
+  "dependencies": {
+    "zeromq": "^6.0.0-beta.6"
+  }
+}

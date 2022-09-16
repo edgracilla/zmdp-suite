@@ -1,0 +1,23 @@
+{
+  "plugins": [
+    "security"
+  ],
+  "extends": [
+    "airbnb/base",
+    "plugin:security/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2022
+  },
+  "rules": {
+    "no-console": "off", //!
+
+    "import/extensions": ["off", "ignorePackages"],
+    "import/no-extraneous-dependencies": "off",
+    "object-curly-newline": "off",
+    "no-underscore-dangle": "off"
+  },
+  "ignorePatterns": [
+    "node_modules"
+  ]
+}
