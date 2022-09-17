@@ -21,7 +21,7 @@ const access = {
   },
   read: (_id, meta) => ({
     _id,
-    user: meta._user._id,
+    user: meta?._user._id,
     role: 'c',
     merchant: 'd',
   }),
