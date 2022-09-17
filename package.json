@@ -2,7 +2,7 @@
   "name": "zmdp-suite",
   "version": "1.0.0",
   "description": "ZeroMQ Majordomo Protocol - NodeJS Implementation",
-  "main": "index.js",
+  "main": "index.mjs",
   "type": "module",
   "scripts": {
     "broker": "node ./tests/run-broker.mjs",
