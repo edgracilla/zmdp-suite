@@ -1,6 +1,6 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 import pino from 'pino';
-import Broker from '../lib/Broker.mjs';
+import { Broker } from '../index.mjs';
 
 const conf = {
   transport: {
