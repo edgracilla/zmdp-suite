@@ -28,7 +28,7 @@
     "pino-pretty": "^9.1.0"
   },
   "dependencies": {
-    "zeromq": "^5.3.1",
-    "zmdp-protocoder": "github:edgracilla/zmdp-protocoder"
+    "zeromq": "^6.0.0-beta.16",
+    "zmdp-protocoder": "github:edgracilla/zmdp-protocoder#beta.1"
   }
 }

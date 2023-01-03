@@ -1,29 +1,25 @@
-import ProtoCoder from 'zmdp-protocoder';
 import Worker from '../lib/Worker.mjs';
-
-const zpc = new ProtoCoder('./tests/zproto');
 
 const conf = {
   service: 'tu-identity-api',
   address: 'tcp://127.0.0.1:4000',
   heartbeatLiveness: 3,
   heartbeatInterval: 3000,
+
+  protoSrc: './tests/zproto',
 };
 
 const worker = new Worker(conf);
 
-// --
-
 const access = {
-  x: 12,
   create() {
     return `createFn: ${this.x}`;
   },
-  read: (_id, meta) => ({
-    _id,
-    user: meta?._user._id,
-    role: 'c',
-    merchant: 'd',
+  read: async () => ({
+    _id: 'test',
+    user: 'user',
+    role: 'role',
+    merchant: 'merchant',
   }),
   _update: (_id, data, meta) => `updateFn: ${typeof _id} ${typeof data} ${typeof meta}`,
   get update() {
@@ -44,9 +40,6 @@ const main = async () => {
   worker.exposeFn(mod, access.read.bind(access));
   // worker.exposeFn(mod, module.update)
   // worker.exposeFn(mod, module.delete)
-
-  worker.setParamDecoder(zpc.paramDecode.bind(zpc));
-  worker.setResultEncoder(zpc.resultEncode.bind(zpc));
 
   await worker.start();
 };
