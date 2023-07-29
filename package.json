@@ -1,6 +1,6 @@
 {
   "name": "zmdp-suite",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "ZeroMQ Majordomo Protocol - NodeJS Implementation",
   "main": "index.mjs",
   "type": "module",
@@ -28,7 +28,7 @@
     "pino-pretty": "^9.1.0"
   },
   "dependencies": {
-    "zeromq": "^6.0.0-beta.16",
-    "zmdp-protocoder": "github:edgracilla/zmdp-protocoder#beta.1"
+    "zeromq": "^6.0.0-beta.17",
+    "zmdp-protocoder": "^1.0.0"
   }
 }

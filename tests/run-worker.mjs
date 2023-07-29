@@ -4,7 +4,7 @@ const conf = {
   service: 'tu-identity-api',
   address: 'tcp://127.0.0.1:4000',
   heartbeatLiveness: 3,
-  heartbeatInterval: 3000,
+  heartbeatInterval: 5000,
 
   protoSrc: './tests/zproto',
 };
