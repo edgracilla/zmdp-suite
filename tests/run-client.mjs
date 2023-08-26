@@ -20,9 +20,13 @@ const meta = {
 };
 
 const main = async () => {
-  const resp = await client.sendRcvProto('read', { _id, meta });
-  console.log('--a', resp);
+  try {
+    const resp = await client.sendRcvProto('read', { _id, meta });
+    console.log('--a', resp);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-setInterval(main, 1000);
-// main();
+// setInterval(main, 1000);
+main();

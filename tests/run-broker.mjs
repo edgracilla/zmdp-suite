@@ -10,7 +10,7 @@ const conf = {
 };
 
 const svcConf = {
-  verbose: 2,
+  verbose: 1,
   heartbeatLiveness: 3,
   heartbeatInterval: 3000,
   workerRequestTimeout: 5000,
